@@ -174,9 +174,6 @@
 		8DCDADB117A6B3CC008AAA28 /* Ribbit */ = {
 			isa = PBXGroup;
 			children = (
-				8DCDADC817A6BA34008AAA28 /* MainStoryboard.storyboard */,
-				8DCDADD617A6BC26008AAA28 /* Images */,
-				B3EB1F091D6DB6DF00B5FDAD /* Model */,
 				8DCDADBA17A6B3CC008AAA28 /* AppDelegate.h */,
 				8DCDADBB17A6B3CC008AAA28 /* AppDelegate.m */,
 				8D5ED96117AFFE300079548F /* CameraViewController.h */,
@@ -193,6 +190,9 @@
 				8DCDADF217A82EEB008AAA28 /* LoginViewController.m */,
 				8DCDADEE17A82EC7008AAA28 /* SignupViewController.h */,
 				8DCDADEF17A82EC7008AAA28 /* SignupViewController.m */,
+				B3EB1F091D6DB6DF00B5FDAD /* Model */,
+				8DCDADC817A6BA34008AAA28 /* MainStoryboard.storyboard */,
+				8DCDADD617A6BC26008AAA28 /* Images */,
 				8DCDADB217A6B3CC008AAA28 /* Supporting Files */,
 				B3EB1F131D6F06A400B5FDAD /* Constants.h */,
 			);

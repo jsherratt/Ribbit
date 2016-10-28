@@ -21,8 +21,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.moviePlayer = [[MPMoviePlayerController alloc] init];
+    
+    //Solution - Updated movie player
+    self.moviePlayer = [[AVPlayer alloc] init];
     
     if (self.currentUser != nil) {
         NSLog(@"Current user: %@", self.currentUser.username);
@@ -81,13 +82,16 @@
     else {
         // File type is video
         File *videoFile = self.selectedMessage.file;
-        self.moviePlayer.contentURL = videoFile.fileURL;
-        [self.moviePlayer prepareToPlay];
-        [self.moviePlayer thumbnailImageAtTime:0 timeOption:MPMovieTimeOptionNearestKeyFrame];
         
-        // Add it to the view controller so we can see it
-        [self.view addSubview:self.moviePlayer.view];
-        [self.moviePlayer setFullscreen:YES animated:YES];
+        //Solution - Updated movie player
+        self.moviePlayer = [AVPlayer playerWithURL:videoFile.fileURL];
+        
+        AVPlayerViewController *playerVC = [[AVPlayerViewController alloc] init];
+        playerVC.player = self.moviePlayer;
+        
+        [self presentViewController:playerVC animated:true completion:^{
+            [self.moviePlayer play];
+        }];
     }
     
     // Delete it!

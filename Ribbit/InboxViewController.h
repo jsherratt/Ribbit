@@ -6,18 +6,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MediaPlayer/MediaPlayer.h>
 #import "User.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AVKit/AVKit.h>
 
 @class Message;
 
 @interface InboxViewController : UITableViewController
 
-//Solution so the right view controller is displayed on app launch
+//Solution - The right view controller is displayed on app launch
 @property (nonatomic, strong) User *currentUser;
 
 @property (nonatomic, strong) Message *selectedMessage;
-@property (nonatomic, strong) MPMoviePlayerController *moviePlayer;
+
+//Solution - Added AVPlayer to replaced the deprecated MPMoviePlayerController API
+@property (nonatomic, strong) AVPlayer *moviePlayer;
 
 - (IBAction)logout:(id)sender;
 

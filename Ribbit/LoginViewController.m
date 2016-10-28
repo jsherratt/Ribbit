@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "User.h"
+#import "InboxViewController.h"
 
 @interface LoginViewController ()
 
@@ -33,6 +35,14 @@
         [alertView show];
     }
     else {
+        
+        User *currentUser = [User currentUser];
+        currentUser.username = username;
+        
+        InboxViewController *inboxVc = [[InboxViewController alloc] init];
+        inboxVc.currentUser = currentUser;
+        
+        [self.navigationController popToRootViewControllerAnimated: true];
         
 //        [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
 //            if (error) {

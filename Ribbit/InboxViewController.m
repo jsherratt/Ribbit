@@ -24,9 +24,8 @@
 
     self.moviePlayer = [[MPMoviePlayerController alloc] init];
     
-    User *currentUser = [User currentUser];
-    if (currentUser) {
-        NSLog(@"Current user: %@", currentUser.username);
+    if (self.currentUser != nil) {
+        NSLog(@"Current user: %@", self.currentUser.username);
     }
     else {
         [self performSegueWithIdentifier:@"showLogin" sender:self];

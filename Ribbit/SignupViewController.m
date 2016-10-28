@@ -8,6 +8,7 @@
 
 #import "SignupViewController.h"
 #import "User.h"
+#import "InboxViewController.h"
 
 @interface SignupViewController ()
 
@@ -37,6 +38,9 @@
         newUser.username = username;
         newUser.password = password;
         newUser.email = email;
+        
+        InboxViewController *inboxVc = [[InboxViewController alloc] init];
+        inboxVc.currentUser = newUser;
         
 //        [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 //            if (error) {

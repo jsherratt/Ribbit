@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "User.h"
 
 @class Message;
 
 @interface App : NSObject
 
+//Solution so friends do not display multiple times in the FriendsViewController
+@property(nonatomic, strong, readonly) NSArray<User *> *allUsers;
+
 + (instancetype) currentApp;
 - (void) addMessage:(Message*)message;
 - (void) deleteMessage:(Message*)message;
 - (NSArray *) messages;
-- (NSArray *) allUsers;
 
 @end

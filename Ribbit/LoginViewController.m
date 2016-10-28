@@ -21,6 +21,26 @@
     [super viewDidLoad];
 
     self.navigationItem.hidesBackButton = YES;
+    
+    //Add gesture recognizer to hide keyboard
+    UITapGestureRecognizer *imageGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
+    [self.view addGestureRecognizer:imageGestureRecognizer];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
+}
+
+//Hide keyboard when view is tapped
+-(void)viewTapped {
+    
+    [self.view endEditing:true];
 }
 
 

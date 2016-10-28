@@ -8,6 +8,10 @@
 	<string>Ribbit</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIcons</key>
+	<dict/>
+	<key>CFBundleIcons~ipad</key>
+	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -24,6 +28,12 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera needs permission to take photo's</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>The microphone needs permission to take record video and audio</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The photo library needs permission to access your photos</string>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -34,11 +44,5 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>The camera needs permission to take photo&apos;s</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>The photo library needs permission to access your photos</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>The microphone needs permission to take record video and audio</string>
 </dict>
 </plist>

@@ -19,7 +19,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    //Add gesture recognizer to hide keyboard
+    UITapGestureRecognizer *imageGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
+    [self.view addGestureRecognizer:imageGestureRecognizer];
+}
+
+//Hide keyboard when view is tapped
+-(void)viewTapped {
+    
+    [self.view endEditing:true];
 }
 
 - (IBAction)signup:(id)sender {

@@ -38,5 +38,7 @@
 	<string>The camera needs permission to take photo&apos;s</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>The photo library needs permission to access your photos</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>The microphone needs permission to take record video and audio</string>
 </dict>
 </plist>

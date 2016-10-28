@@ -169,7 +169,9 @@
     NSString *fileType;
     
     if (self.image != nil) {
-        UIImage *newImage = self.image;
+        
+        //Solution - Used resizeImage method to fix the memory leak
+        UIImage *newImage = [self resizeImage:self.image toWidth:100 andHeight:100];
         fileData = UIImagePNGRepresentation(newImage);
         fileName = [NSString stringWithFormat:@"%f.png",[NSDate timeIntervalSinceReferenceDate]];
         fileType = @"image";
